@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Southern Bee Collective</title>
+  <meta name="description" content="Books, guides, templates and printables from Southern Bee Collective.">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Work+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="" onerror="this.remove()">
+        <span class="brand-name">Southern Bee Collective</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="subscribe.html">Join the list</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-split">
+        <div class="hero-copy">
+        <h1>Books, guides and printables you can put to work today.</h1>
+        <p>Instant digital downloads from Southern Bee Collective, with boutique goods coming soon.</p>
+        <div class="btn-row">
+          <a class="btn" href="shop.html">Shop downloads</a>
+          <a class="btn ghost" href="subscribe.html">Join the list</a>
+        </div>
+        </div>
+        <img class="hero-logo" src="assets/logo.png" alt="Southern Bee Collective logo">
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">What's in the hive</span>
+          <h2>Instant downloads</h2>
+        </div>
+        <div class="kinds">
+          <a class="kind" href="shop.html"><h3>Books</h3><p>Longer reads you can keep coming back to.</p></a>
+          <a class="kind" href="shop.html"><h3>Guides</h3><p>Step-by-step help on one topic, start to finish.</p></a>
+          <a class="kind" href="shop.html"><h3>Templates</h3><p>Ready-made layouts you can edit and make your own.</p></a>
+          <a class="kind" href="shop.html"><h3>Printables</h3><p>Print at home and put to use the same day.</p></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--comb)" data-hide-when-empty>
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Featured</span>
+          <h2>Fresh from the hive</h2>
+        </div>
+        <div class="grid" id="downloads-grid" data-limit="3"></div>
+        <div><a class="btn ghost" href="shop.html">See everything</a></div>
+      </div>
+    </section>
+
+    <section class="signup" id="signup">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">The Hive Letter</span>
+          <h2>Get new releases first</h2>
+          <p>New downloads, freebies and boutique drops, sent straight to your inbox. No spam, unsubscribe anytime.</p>
+        </div>
+        <form class="signup-form" id="signup-form-home" novalidate>
+          <div class="row">
+            <input id="name-home" name="name" type="text" aria-label="First name" placeholder="First name" autocomplete="given-name">
+            <input id="email-home" name="email" type="email" aria-label="Email address" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+          <div class="row"><button class="btn" type="submit">Sign me up</button></div>
+          <p class="form-note" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>&copy; <span id="year">2026</span> Southern Bee Collective</span>
+      <span><a href="subscribe.html">Join the list</a> &middot; <a href="shop.html">Shop</a></span>
+    </div>
+  </footer>
+</body>
+</html>
