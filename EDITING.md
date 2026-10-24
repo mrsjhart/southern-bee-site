@@ -14,6 +14,9 @@ Your site uses **Pages CMS**, a free editor that works with your GitHub account.
 
 To remove a product, open the list, use the item's menu to delete it, and click **Save**.
 
+## Books
+Click **Books** to change a book's title, description, Amazon link or cover. Click **Add an entry** to add another book.
+
 ## Digital downloads
 Digital downloads are sold in your Etsy shop. Every "Shop on Etsy" button on the site points to the **Etsy shop link** under **Page text**, so if your shop address ever changes, update it there.
 

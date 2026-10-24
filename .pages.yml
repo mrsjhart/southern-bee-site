@@ -5,6 +5,18 @@ media:
   categories: [image]
 
 content:
+  - name: books
+    label: Books
+    type: file
+    path: content/books.json
+    list: true
+    fields:
+      - { name: title, label: Book title, type: string, required: true }
+      - { name: description, label: Short description, type: text }
+      - { name: link, label: Amazon link, type: string }
+      - { name: image, label: Cover image, type: image }
+      - { name: imageAlt, label: Image description (helps Google and screen readers), type: string }
+
   - name: boutique
     label: Boutique goods
     type: file
