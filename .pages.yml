@@ -42,5 +42,5 @@ content:
       - { name: aboutText, label: About page text (blank line between paragraphs), type: text }
       - { name: contactEmail, label: Contact email, type: string }
       - { name: etsyUrl, label: Etsy shop link, type: string }
-      - { name: equineHeadline, label: Equine Services headline, type: string }
-      - { name: equineText, label: Equine Services text (blank line between paragraphs), type: text }
+      - { name: equineHeadline, label: Holistic Wellness headline, type: string }
+      - { name: equineText, label: Holistic Wellness text (blank line between paragraphs), type: text }
