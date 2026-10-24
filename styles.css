@@ -1,11 +1,11 @@
 /* Southern Bee Collective
-   Look: soft glamour. Warm ivory and champagne, honey gold accents, soft
+   Look: soft glamour. Warm ivory with soft yellow bands, honey gold accents, soft
    deep teal instead of hard black, a centered header and a graceful serif.
    Edit the colors here and the whole site follows. */
 :root {
   --honey: #F5DE77;      /* brand yellow, reads as gold against black */
   --honey-deep: #7A5E00; /* darker gold for small text on light backgrounds */
-  --champagne: #F7EDCF;  /* soft honey wash for feature bands */
+  --champagne: #FFE88A;  /* soft yellow for feature bands */
   --ink: #103C4A;        /* deep teal for text, buttons and footer */
   --ink-soft: #4C6168;   /* secondary text */
   --mist: #5A6A6E;       /* secondary text on champagne */
@@ -75,7 +75,7 @@ strong, b { font-weight: 500; }
 }
 
 /* Hero: black stage, centered */
-.hero { background: linear-gradient(180deg, var(--champagne), var(--pearl)); color: var(--ink); }
+.hero { background: var(--champagne); color: var(--ink); }
 .hero .wrap { padding-block: clamp(72px, 13vw, 168px); display: grid; justify-items: center; text-align: center; }
 .hero-copy { display: grid; justify-items: center; gap: 28px; min-width: 0; }
 .hero h1 { font-size: var(--step-4); font-weight: 400; max-width: 16ch; }
