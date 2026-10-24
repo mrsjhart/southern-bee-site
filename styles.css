@@ -113,25 +113,6 @@ strong, b { font-weight: 500; }
 .section-head p { color: var(--ink-soft); }
 .section h2 { font-size: var(--step-3); }
 
-/* What we make: four columns divided by fine rules */
-.kinds { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-block: 1px solid var(--honey); }
-.kind {
-  display: grid; gap: 10px; align-content: start; justify-items: center; text-align: center; text-decoration: none;
-  padding: 40px 24px 44px;
-}
-.kind + .kind { border-left: 1px solid var(--line); }
-.kind h3 { font-family: var(--display); font-size: var(--step-2); }
-.kind p { color: var(--ink-soft); max-width: 24ch; font-size: 0.98rem; }
-.kind:hover h3 { text-decoration: underline; text-decoration-color: var(--honey); text-decoration-thickness: 2px; text-underline-offset: 8px; }
-@media (max-width: 860px) {
-  .kinds { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .kind:nth-child(3) { border-left: 0; }
-  .kind:nth-child(n+3) { border-top: 1px solid var(--line); }
-}
-@media (max-width: 480px) {
-  .kind { padding: 28px 12px 32px; }
-}
-
 /* Product grid */
 .filters { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
 .chip {
