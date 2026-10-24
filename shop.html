@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Shop Digital Downloads & Boutique | Southern Bee Collective</title>
-  <meta name="description" content="Shop books, guides, templates and printables from Southern Bee Collective. Every download is delivered the moment you check out.">
+  <title>Books, Digital Downloads & Boutique | Southern Bee Collective</title>
+  <meta name="description" content="Shop Southern Bee Collective books on Amazon and guides, templates and printables in our Etsy shop, with boutique goods coming soon.">
   <link rel="canonical" href="https://www.southernbeecollective.com/shop.html">
-  <meta name="theme-color" content="#F5DE77">
+  <meta name="theme-color" content="#103C4A">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Southern Bee Collective">
-  <meta property="og:title" content="Shop Digital Downloads & Boutique | Southern Bee Collective">
-  <meta property="og:description" content="Shop books, guides, templates and printables from Southern Bee Collective. Every download is delivered the moment you check out.">
+  <meta property="og:title" content="Books, Digital Downloads & Boutique | Southern Bee Collective">
+  <meta property="og:description" content="Shop Southern Bee Collective books on Amazon and guides, templates and printables in our Etsy shop, with boutique goods coming soon.">
   <meta property="og:url" content="https://www.southernbeecollective.com/shop.html">
   <meta property="og:image" content="https://www.southernbeecollective.com/assets/social-preview.jpg">
   <meta property="og:image:alt" content="Southern Bee Collective logo">
@@ -19,7 +19,7 @@
   <link rel="icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Work+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Parisienne&family=Jost:wght@300;400;500&display=swap">
   <link rel="stylesheet" href="styles.css">
   <script src="site.js" defer></script>
 </head>
@@ -34,6 +34,7 @@
         <a href="index.html">Home</a>
         <a href="shop.html" aria-current="page">Shop</a>
         <a href="subscribe.html">Join the list</a>
+        <a href="equine.html">Equine Services</a>
         <a href="about.html">About</a>
       </nav>
     </div>
@@ -42,26 +43,34 @@
   <main>
     <section class="hero page-hero">
       <div class="wrap">
-        <h1>Shop</h1>
-        <p>Every download is delivered to your inbox the moment you check out.</p>
+        <h1 class="script">Shop</h1>
+        <p>Books on Amazon, digital downloads on Etsy, and boutique goods coming soon.</p>
+      </div>
+    </section>
+
+    <section class="section books-section" id="books">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="script">Books</h2>
+          <p>Read a preview of each book on Amazon.</p>
+        </div>
+        <div class="grid books-grid" id="books-grid"></div>
+      </div>
+    </section>
+
+    <section class="section tinted">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="script">Digital downloads</h2>
+          <p>Guides, templates and printables, all sold through our Etsy shop. Checkout is secure, and your files are ready to download the moment you buy.</p>
+        </div>
+        <div class="etsy-cta"><a class="btn" href="https://southernbcollective.etsy.com" target="_blank" rel="noopener" data-link="etsyUrl">Visit our Etsy shop</a></div>
       </div>
     </section>
 
     <section class="section">
       <div class="wrap">
         <div class="section-head">
-          <span class="eyebrow">Digital downloads</span>
-          <h2>Books, guides, templates and printables</h2>
-        </div>
-        <div class="filters" id="filters" role="group" aria-label="Filter by type"></div>
-        <div class="grid" id="downloads-grid"></div>
-      </div>
-    </section>
-
-    <section class="section" style="background:var(--comb)">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="eyebrow">Boutique</span>
           <h2>Boutique goods</h2>
         </div>
         <div id="boutique-grid"></div>

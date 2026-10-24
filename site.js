@@ -22,7 +22,7 @@ function esc(s) {
 function cardHTML(p) {
   const img = p.image
     ? `<img src="${esc(p.image)}" alt="${esc(p.imageAlt || p.title)}" loading="lazy" width="400" height="500">`
-    : `<span class="ph" aria-hidden="true">${esc(p.title)}</span>`;
+    : `<span class="ph" aria-hidden="true"><img src="assets/logo.png" alt="" width="600" height="520" loading="lazy"></span>`;
   const btn = p.link
     ? `<a class="btn" href="${esc(p.link)}" target="_blank" rel="noopener">Get it</a>`
     : `<span class="btn" aria-disabled="true">Coming soon</span>`;
@@ -35,6 +35,34 @@ function cardHTML(p) {
       <div class="meta"><span class="price">${esc(p.price)}</span>${btn}</div>
     </div>
   </article>`;
+}
+
+function bookHTML(b) {
+  const img = b.image
+    ? `<img src="${esc(b.image)}" alt="${esc(b.imageAlt || "Cover of " + b.title)}" loading="lazy" width="400" height="600">`
+    : `<span class="ph" aria-hidden="true"><img src="assets/logo.png" alt="" width="600" height="520" loading="lazy"></span>`;
+  const btn = b.link
+    ? `<a class="btn" href="${esc(b.link)}" target="_blank" rel="noopener">Preview on Amazon</a>`
+    : `<span class="btn" aria-disabled="true">Coming soon</span>`;
+  return `<article class="card book">
+    <div class="card-img">${img}</div>
+    <div class="card-body">
+      <h3>${esc(b.title)}</h3>
+      ${b.description ? `<p>${esc(b.description)}</p>` : ""}
+      <div class="meta">${btn}</div>
+    </div>
+  </article>`;
+}
+
+function renderBooks(BOOKS) {
+  const grid = document.getElementById("books-grid");
+  if (!grid) return;
+  if (!BOOKS.length) {
+    const section = grid.closest("section");
+    if (section) section.hidden = true;
+    return;
+  }
+  grid.innerHTML = BOOKS.map(bookHTML).join("");
 }
 
 function renderShop(DOWNLOADS, BOUTIQUE) {
@@ -120,10 +148,14 @@ async function loadJSON(path, fallback) {
 }
 
 function applySiteText(text) {
+  document.querySelectorAll("[data-link]").forEach(el => {
+    const url = text[el.dataset.link];
+    if (url) el.href = url;
+  });
   document.querySelectorAll("[data-content]").forEach(el => {
     const value = text[el.dataset.content];
     if (!value) return;
-    if (el.dataset.content === "aboutText") {
+    if (el.dataset.content === "aboutText" || el.dataset.content === "equineText") {
       el.innerHTML = String(value).split(/\n\s*\n/).map(para => `<p>${esc(para.trim())}</p>`).join("");
     } else if (el.dataset.content === "contactEmail") {
       el.textContent = value;
@@ -136,12 +168,15 @@ function applySiteText(text) {
 
 document.addEventListener("DOMContentLoaded", async () => {
   const needsShop = document.getElementById("downloads-grid") || document.getElementById("boutique-grid");
-  const [text, downloads, boutique] = await Promise.all([
+  const needsBooks = document.getElementById("books-grid");
+  const [text, downloads, boutique, books] = await Promise.all([
     loadJSON("content/site.json", {}),
-    needsShop ? loadJSON("content/downloads.json", []) : [],
+    [],
     needsShop ? loadJSON("content/boutique.json", []) : [],
+    needsBooks ? loadJSON("content/books.json", []) : [],
   ]);
   applySiteText(text);
+  renderBooks(books.filter(b => b && b.title));
   renderShop(downloads.filter(p => p && p.title), boutique.filter(p => p && p.title));
   wireSignup();
   const y = document.getElementById("year");

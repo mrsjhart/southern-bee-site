@@ -5,21 +5,15 @@ media:
   categories: [image]
 
 content:
-  - name: downloads
-    label: Digital downloads
+  - name: books
+    label: Books
     type: file
-    path: content/downloads.json
+    path: content/books.json
     list: true
     fields:
-      - { name: title, label: Product name, type: string, required: true }
-      - name: type
-        label: Type
-        type: select
-        options:
-          values: [Book, Guide, Template, Printable]
+      - { name: title, label: Book title, type: string, required: true }
       - { name: description, label: Short description, type: text }
-      - { name: price, label: Price (for example $12), type: string }
-      - { name: link, label: Sales page link, type: string }
+      - { name: link, label: Amazon link, type: string }
       - { name: image, label: Cover image, type: image }
       - { name: imageAlt, label: Image description (helps Google and screen readers), type: string }
 
@@ -44,5 +38,9 @@ content:
     fields:
       - { name: heroTitle, label: Home page headline, type: string }
       - { name: heroText, label: Home page intro, type: text }
+      - { name: homeQuote, label: Home page quote, type: text }
       - { name: aboutText, label: About page text (blank line between paragraphs), type: text }
       - { name: contactEmail, label: Contact email, type: string }
+      - { name: etsyUrl, label: Etsy shop link, type: string }
+      - { name: equineHeadline, label: Equine Services headline, type: string }
+      - { name: equineText, label: Equine Services text (blank line between paragraphs), type: text }

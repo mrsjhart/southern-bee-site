@@ -6,7 +6,7 @@
   <title>Southern Bee Collective | Books, Guides, Templates & Printables</title>
   <meta name="description" content="Instant digital downloads from Southern Bee Collective: books, guides, templates and printables, with boutique goods coming soon.">
   <link rel="canonical" href="https://www.southernbeecollective.com/">
-  <meta name="theme-color" content="#F5DE77">
+  <meta name="theme-color" content="#103C4A">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Southern Bee Collective">
   <meta property="og:title" content="Southern Bee Collective | Books, Guides, Templates & Printables">
@@ -19,7 +19,7 @@
   <link rel="icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Work+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Parisienne&family=Jost:wght@300;400;500&display=swap">
   <link rel="stylesheet" href="styles.css">
   <script src="site.js" defer></script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Southern Bee Collective", "url": "https://www.southernbeecollective.com/", "logo": "https://www.southernbeecollective.com/assets/logo.png"}</script>
@@ -35,6 +35,7 @@
         <a href="index.html" aria-current="page">Home</a>
         <a href="shop.html">Shop</a>
         <a href="subscribe.html">Join the list</a>
+        <a href="equine.html">Equine Services</a>
         <a href="about.html">About</a>
       </nav>
     </div>
@@ -42,50 +43,57 @@
 
   <main>
     <section class="hero">
-      <div class="wrap hero-split">
+      <div class="wrap">
         <div class="hero-copy">
-        <h1 data-content="heroTitle">Books, guides and printables you can put to work today.</h1>
+        <h1 class="script" data-content="heroTitle">Books, guides and printables you can put to work today.</h1>
         <p data-content="heroText">Instant digital downloads from Southern Bee Collective, with boutique goods coming soon.</p>
         <div class="btn-row">
-          <a class="btn" href="shop.html">Shop downloads</a>
+          <a class="btn" href="https://southernbcollective.etsy.com" target="_blank" rel="noopener" data-link="etsyUrl">Shop on Etsy</a>
           <a class="btn ghost" href="subscribe.html">Join the list</a>
         </div>
         </div>
-        <img class="hero-logo" src="assets/logo.png" alt="Southern Bee Collective logo: a hand-drawn honeybee inside a yellow hexagon" width="600" height="520" fetchpriority="high">
+      </div>
+    </section>
+
+    <section class="quote-band">
+      <div class="wrap">
+        <figure class="quote">
+          <blockquote><p data-content="homeQuote">Anyone who thinks they’re too small to make a difference, has never met the honey bee.</p></blockquote>
+        </figure>
       </div>
     </section>
 
     <section class="section">
       <div class="wrap">
         <div class="section-head">
-          <span class="eyebrow">What's in the hive</span>
-          <h2>Instant downloads</h2>
+          <h2 class="script">Digital downloads</h2>
+          <p>Guides, templates and printables are sold through our Etsy shop, and books are on Amazon.</p>
         </div>
         <div class="kinds">
-          <a class="kind" href="shop.html"><h3>Books</h3><p>Longer reads you can keep coming back to.</p></a>
-          <a class="kind" href="shop.html"><h3>Guides</h3><p>Step-by-step help on one topic, start to finish.</p></a>
-          <a class="kind" href="shop.html"><h3>Templates</h3><p>Ready-made layouts you can edit and make your own.</p></a>
-          <a class="kind" href="shop.html"><h3>Printables</h3><p>Print at home and put to use the same day.</p></a>
+          <a class="kind" href="#books"><h3>Books</h3><p>Longer reads you can keep coming back to.</p></a>
+          <a class="kind" href="https://southernbcollective.etsy.com" target="_blank" rel="noopener" data-link="etsyUrl"><h3>Guides</h3><p>Step-by-step help on one topic, start to finish.</p></a>
+          <a class="kind" href="https://southernbcollective.etsy.com" target="_blank" rel="noopener" data-link="etsyUrl"><h3>Templates</h3><p>Ready-made layouts you can edit and make your own.</p></a>
+          <a class="kind" href="https://southernbcollective.etsy.com" target="_blank" rel="noopener" data-link="etsyUrl"><h3>Printables</h3><p>Print at home and put to use the same day.</p></a>
         </div>
+        <div><a class="btn" href="https://southernbcollective.etsy.com" target="_blank" rel="noopener" data-link="etsyUrl">Shop downloads on Etsy</a></div>
       </div>
     </section>
 
-    <section class="section" style="background:var(--comb)" data-hide-when-empty>
+
+    <section class="section tinted books-section" id="books">
       <div class="wrap">
         <div class="section-head">
-          <span class="eyebrow">Featured</span>
-          <h2>Fresh from the hive</h2>
+          <h2 class="script">Books</h2>
+          <p>Read a preview of each book on Amazon.</p>
         </div>
-        <div class="grid" id="downloads-grid" data-limit="3"></div>
-        <div><a class="btn ghost" href="shop.html">See everything</a></div>
+        <div class="grid books-grid" id="books-grid"></div>
       </div>
     </section>
 
     <section class="signup" id="signup">
       <div class="wrap">
         <div class="section-head">
-          <span class="eyebrow">The Hive Letter</span>
-          <h2>Get new releases first</h2>
+          <h2 class="script">Get new releases first</h2>
           <p>New downloads, freebies and boutique drops, sent straight to your inbox. No spam, unsubscribe anytime.</p>
         </div>
         <form class="signup-form" id="signup-form-home" novalidate>
