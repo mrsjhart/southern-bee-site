@@ -1,0 +1,23 @@
+# Updating your website (no code needed)
+
+Your site uses **Pages CMS**, a free editor that works with your GitHub account.
+
+## Sign in
+1. Go to https://app.pagescms.org and click **Sign in with GitHub**.
+2. Choose the `southern-bee-site` repository (approve access the first time).
+
+## Add or change a product
+1. Click **Digital downloads** (or **Boutique goods**) in the left menu.
+2. Click **Add an entry** to add a product, or click an existing one to change it.
+3. Fill in the name, type, description, price and sales page link. Upload a cover image if you have one.
+4. Click **Save**. Your live site updates in about a minute.
+
+To remove a product, open the list, use the item's menu to delete it, and click **Save**.
+
+## Change page text
+Click **Page text** to edit the home page headline and intro, the About page, and your contact email. Leave a blank line between paragraphs on the About page.
+
+## Good to know
+- Products with no sales link show a "Coming soon" button.
+- Until you add a product, each shop section shows a "coming soon" box with a signup button.
+- The image description is used by Google and screen readers. Describe the image in a few words, like "Cover of the Horse Comfort Guide".

@@ -1,7 +1,5 @@
 /* ============================================================
    SOUTHERN BEE COLLECTIVE — SITE SETTINGS
-   This is the only file you need to edit to add products
-   or connect your email list.
    ============================================================ */
 
 const SETTINGS = {
@@ -10,25 +8,8 @@ const SETTINGS = {
   mailerliteFormUrl: "https://assets.mailerlite.com/jsonp/2737784/forms/202167666866128894/subscribe",
 };
 
-/* DIGITAL DOWNLOADS
-   Copy one { ... } block to add a product. Fields:
-   title, type (Book, Guide, Template, or Printable), description,
-   price (leave "" to hide), link (your sales page), image (optional, e.g. "assets/red-light-guide.jpg") */
-const DOWNLOADS = [
-  // Example (delete the two slashes at the start of each line to use it):
-  // {
-  //   title: "My First Guide",
-  //   type: "Guide",
-  //   description: "One or two sentences about what's inside.",
-  //   price: "$12",
-  //   link: "https://your-sales-page-link",
-  //   image: "assets/my-first-guide.jpg",
-  // },
-];
-
-/* BOUTIQUE GOODS
-   Leave empty until you're ready. Same fields as above (type can be anything, like "Apparel"). */
-const BOUTIQUE = [];
+/* Products and page text live in the content/ folder and are edited
+   through Pages CMS (see EDITING.md), so there's nothing to change here. */
 
 /* ============================================================
    You shouldn't need to edit below this line.
@@ -40,7 +21,7 @@ function esc(s) {
 
 function cardHTML(p) {
   const img = p.image
-    ? `<img src="${esc(p.image)}" alt="${esc(p.title)}" loading="lazy">`
+    ? `<img src="${esc(p.image)}" alt="${esc(p.imageAlt || p.title)}" loading="lazy" width="400" height="500">`
     : `<span class="ph" aria-hidden="true">${esc(p.title)}</span>`;
   const btn = p.link
     ? `<a class="btn" href="${esc(p.link)}" target="_blank" rel="noopener">Get it</a>`
@@ -56,7 +37,7 @@ function cardHTML(p) {
   </article>`;
 }
 
-function renderShop() {
+function renderShop(DOWNLOADS, BOUTIQUE) {
   const grid = document.getElementById("downloads-grid");
   if (grid && !DOWNLOADS.length) {
     const featured = grid.closest("[data-hide-when-empty]");
@@ -129,8 +110,39 @@ function wireSignup() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  renderShop();
+async function loadJSON(path, fallback) {
+  try {
+    const res = await fetch(path, { cache: "no-cache" });
+    return res.ok ? await res.json() : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+function applySiteText(text) {
+  document.querySelectorAll("[data-content]").forEach(el => {
+    const value = text[el.dataset.content];
+    if (!value) return;
+    if (el.dataset.content === "aboutText") {
+      el.innerHTML = String(value).split(/\n\s*\n/).map(para => `<p>${esc(para.trim())}</p>`).join("");
+    } else if (el.dataset.content === "contactEmail") {
+      el.textContent = value;
+      el.href = "mailto:" + value;
+    } else {
+      el.textContent = value;
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const needsShop = document.getElementById("downloads-grid") || document.getElementById("boutique-grid");
+  const [text, downloads, boutique] = await Promise.all([
+    loadJSON("content/site.json", {}),
+    needsShop ? loadJSON("content/downloads.json", []) : [],
+    needsShop ? loadJSON("content/boutique.json", []) : [],
+  ]);
+  applySiteText(text);
+  renderShop(downloads.filter(p => p && p.title), boutique.filter(p => p && p.title));
   wireSignup();
   const y = document.getElementById("year");
   if (y) y.textContent = new Date().getFullYear();

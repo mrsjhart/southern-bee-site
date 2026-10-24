@@ -1,0 +1,48 @@
+# Settings for Pages CMS (https://app.pagescms.org), the no-code editor for this site.
+media:
+  input: assets/uploads
+  output: /assets/uploads
+  categories: [image]
+
+content:
+  - name: downloads
+    label: Digital downloads
+    type: file
+    path: content/downloads.json
+    list: true
+    fields:
+      - { name: title, label: Product name, type: string, required: true }
+      - name: type
+        label: Type
+        type: select
+        options:
+          values: [Book, Guide, Template, Printable]
+      - { name: description, label: Short description, type: text }
+      - { name: price, label: Price (for example $12), type: string }
+      - { name: link, label: Sales page link, type: string }
+      - { name: image, label: Cover image, type: image }
+      - { name: imageAlt, label: Image description (helps Google and screen readers), type: string }
+
+  - name: boutique
+    label: Boutique goods
+    type: file
+    path: content/boutique.json
+    list: true
+    fields:
+      - { name: title, label: Product name, type: string, required: true }
+      - { name: type, label: Category (for example Apparel), type: string }
+      - { name: description, label: Short description, type: text }
+      - { name: price, label: Price, type: string }
+      - { name: link, label: Sales page link, type: string }
+      - { name: image, label: Photo, type: image }
+      - { name: imageAlt, label: Image description, type: string }
+
+  - name: site
+    label: Page text
+    type: file
+    path: content/site.json
+    fields:
+      - { name: heroTitle, label: Home page headline, type: string }
+      - { name: heroText, label: Home page intro, type: text }
+      - { name: aboutText, label: About page text (blank line between paragraphs), type: text }
+      - { name: contactEmail, label: Contact email, type: string }
