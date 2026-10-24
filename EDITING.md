@@ -15,7 +15,7 @@ Your site uses **Pages CMS**, a free editor that works with your GitHub account.
 To remove a product, open the list, use the item's menu to delete it, and click **Save**.
 
 ## Change page text
-Click **Page text** to edit the home page headline and intro, the About page, and your contact email. Leave a blank line between paragraphs on the About page.
+Click **Page text** to edit the home page headline and intro, the About page, the Equine Services page, and your contact email. Leave a blank line between paragraphs on the About and Equine Services pages.
 
 ## Good to know
 - Products with no sales link show a "Coming soon" button.

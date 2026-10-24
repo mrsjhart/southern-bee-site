@@ -19,7 +19,7 @@
   <link rel="icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Work+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..600&family=Jost:wght@400;500&display=swap">
   <link rel="stylesheet" href="styles.css">
   <script src="site.js" defer></script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Southern Bee Collective", "url": "https://www.southernbeecollective.com/", "logo": "https://www.southernbeecollective.com/assets/logo.png"}</script>
@@ -35,9 +35,11 @@
         <a href="index.html" aria-current="page">Home</a>
         <a href="shop.html">Shop</a>
         <a href="subscribe.html">Join the list</a>
+        <a href="equine.html">Equine Services</a>
         <a href="about.html">About</a>
       </nav>
     </div>
+    <div class="awning" aria-hidden="true"></div>
   </header>
 
   <main>
@@ -51,14 +53,13 @@
           <a class="btn ghost" href="subscribe.html">Join the list</a>
         </div>
         </div>
-        <img class="hero-logo" src="assets/logo.png" alt="Southern Bee Collective logo: a hand-drawn honeybee inside a yellow hexagon" width="600" height="520" fetchpriority="high">
+        <div class="hero-window"><img class="hero-logo" src="assets/logo.png" alt="Southern Bee Collective logo: a hand-drawn honeybee inside a yellow hexagon" width="600" height="520" fetchpriority="high"></div>
       </div>
     </section>
 
     <section class="section">
       <div class="wrap">
         <div class="section-head">
-          <span class="eyebrow">What's in the hive</span>
           <h2>Instant downloads</h2>
         </div>
         <div class="kinds">
@@ -70,10 +71,9 @@
       </div>
     </section>
 
-    <section class="section" style="background:var(--comb)" data-hide-when-empty>
+    <section class="section tinted" data-hide-when-empty>
       <div class="wrap">
         <div class="section-head">
-          <span class="eyebrow">Featured</span>
           <h2>Fresh from the hive</h2>
         </div>
         <div class="grid" id="downloads-grid" data-limit="3"></div>
@@ -84,7 +84,6 @@
     <section class="signup" id="signup">
       <div class="wrap">
         <div class="section-head">
-          <span class="eyebrow">The Hive Letter</span>
           <h2>Get new releases first</h2>
           <p>New downloads, freebies and boutique drops, sent straight to your inbox. No spam, unsubscribe anytime.</p>
         </div>

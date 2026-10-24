@@ -22,7 +22,7 @@ function esc(s) {
 function cardHTML(p) {
   const img = p.image
     ? `<img src="${esc(p.image)}" alt="${esc(p.imageAlt || p.title)}" loading="lazy" width="400" height="500">`
-    : `<span class="ph" aria-hidden="true">${esc(p.title)}</span>`;
+    : `<span class="ph" aria-hidden="true"><img src="assets/logo.png" alt="" width="600" height="520" loading="lazy"></span>`;
   const btn = p.link
     ? `<a class="btn" href="${esc(p.link)}" target="_blank" rel="noopener">Get it</a>`
     : `<span class="btn" aria-disabled="true">Coming soon</span>`;
@@ -123,7 +123,7 @@ function applySiteText(text) {
   document.querySelectorAll("[data-content]").forEach(el => {
     const value = text[el.dataset.content];
     if (!value) return;
-    if (el.dataset.content === "aboutText") {
+    if (el.dataset.content === "aboutText" || el.dataset.content === "equineText") {
       el.innerHTML = String(value).split(/\n\s*\n/).map(para => `<p>${esc(para.trim())}</p>`).join("");
     } else if (el.dataset.content === "contactEmail") {
       el.textContent = value;

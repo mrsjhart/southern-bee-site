@@ -46,3 +46,5 @@ content:
       - { name: heroText, label: Home page intro, type: text }
       - { name: aboutText, label: About page text (blank line between paragraphs), type: text }
       - { name: contactEmail, label: Contact email, type: string }
+      - { name: equineHeadline, label: Equine Services headline, type: string }
+      - { name: equineText, label: Equine Services text (blank line between paragraphs), type: text }
