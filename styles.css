@@ -5,7 +5,10 @@
 :root {
   --honey: #F5DE77;      /* brand yellow, reads as gold against black */
   --honey-deep: #7A5E00; /* darker gold for small text on light backgrounds */
-  --champagne: #FFE88A;  /* soft yellow for feature bands */
+  --champagne: #FBF0CC;  /* soft butter yellow for feature bands */
+  --champagne-2: #FDF7E4;/* lighter end of the band wash */
+  --gold: #C9A646;       /* hairlines and small flourishes */
+  --gold-soft: rgba(201, 166, 70, .45);
   --ink: #103C4A;        /* deep teal for text, buttons and footer */
   --ink-soft: #4C6168;   /* secondary text */
   --mist: #5A6A6E;       /* secondary text on champagne */
@@ -224,6 +227,96 @@ h1.script, h2.script { font-family: var(--script); font-weight: 400; line-height
 .site-footer { background: var(--ink); color: #D3DEDF; }
 .site-footer .wrap { padding-block: 32px; display: flex; gap: 16px; justify-content: space-between; flex-wrap: wrap; font-size: 0.9rem; letter-spacing: 0.04em; }
 .site-footer a { color: var(--honey); }
+
+/* ============ Polish: gold details, softer bands, fuller footer ============ */
+
+/* Header: thin gold rule on top, a larger logo */
+.site-header { border-top: 3px solid var(--gold); border-bottom-color: var(--gold-soft); }
+.site-header .wrap { padding-block: 28px 0; gap: 18px; }
+.brand img { height: 72px; }
+.brand-name { letter-spacing: .22em; }
+.nav a { letter-spacing: .22em; font-size: .74rem; }
+@media (max-width: 520px) { .brand img { height: 56px; } .brand-name { letter-spacing: .1em; } .nav a { letter-spacing: .1em; font-size: .7rem; } }
+
+/* Yellow bands: a soft wash with a faint honeycomb texture */
+.hero, .signup:not(.light) {
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='97' viewBox='0 0 56 97'%3E%3Cpath d='M28 0l28 16.2v32.4L28 64.8 0 48.6V16.2zM28 64.8V97' fill='none' stroke='%23B08A1E' stroke-opacity='.07' stroke-width='1'/%3E%3C/svg%3E"),
+    linear-gradient(180deg, var(--champagne) 0%, var(--champagne-2) 100%);
+}
+
+/* Small gold label above a heading */
+.eyebrow { font-size: .74rem; letter-spacing: .3em; text-transform: uppercase; color: var(--honey-deep); display: flex; align-items: center; gap: 14px; }
+.eyebrow::after, .section-head .eyebrow::before { content: ""; width: 48px; height: 1px; background: var(--gold); }
+.section-head .eyebrow { justify-content: center; }
+
+/* Home hero: words on the left, an arched portrait on the right */
+.hero .wrap:has(.hero-grid) { padding-block: clamp(56px, 9vw, 120px); display: block; text-align: left; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(32px, 6vw, 88px); align-items: center; }
+.hero-grid .hero-copy { justify-items: start; gap: 24px; }
+.hero-grid h1.script { font-size: clamp(3rem, 6.4vw, 5.6rem); max-width: 12ch; line-height: 1.08; }
+.hero-grid p { max-width: 30rem; }
+.hero-grid .btn-row { justify-content: flex-start; margin-top: 8px; }
+.arch-frame { justify-self: center; padding: 12px; border: 1px solid var(--gold); border-radius: 999px 999px 10px 10px; width: min(100%, 444px); }
+.arch { aspect-ratio: 4 / 5; border-radius: 999px 999px 6px 6px; overflow: hidden; box-shadow: 0 30px 60px -30px rgba(16, 60, 74, .45); }
+.arch img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; }
+@media (max-width: 820px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-grid .hero-copy { justify-items: center; text-align: center; }
+  .hero-grid .btn-row { justify-content: center; }
+  .hero-grid .eyebrow::before { content: ""; width: 48px; height: 1px; background: var(--gold); }
+  .arch-frame { width: min(86%, 360px); }
+}
+
+/* Buttons: gold on hover with a soft lift */
+.btn { padding: 17px 36px; letter-spacing: .22em; font-size: .74rem; transition: background-color .3s ease, color .3s ease, border-color .3s ease, transform .3s ease, box-shadow .3s ease; }
+.btn:hover, .signup.light .btn:hover { background: var(--gold); border-color: var(--gold); color: #fff; transform: translateY(-1px); box-shadow: 0 10px 22px -12px rgba(16, 60, 74, .5); }
+.btn.ghost:hover { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.nav a:hover { border-bottom-color: var(--gold); }
+
+/* Quote: gold hairlines */
+.quote::before, .quote::after { background: var(--gold); opacity: 1; width: 72px; }
+.quote p { font-size: clamp(1.8rem, 3.8vw, 2.8rem); }
+
+/* Downloads: a framed three-point card */
+.feature { max-width: 880px; margin-inline: auto; width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border: 1px solid var(--gold-soft); background: #fff; }
+.feature > div { padding: 36px 28px; text-align: center; display: grid; gap: 10px; justify-items: center; align-content: start; }
+.feature > div + div { border-left: 1px solid var(--gold-soft); }
+.feature .num { font-family: var(--display); font-style: italic; color: var(--gold); font-size: 1.6rem; line-height: 1; }
+.feature h3 { font-family: var(--display); font-size: 1.55rem; }
+.feature p { font-size: .95rem; color: var(--ink-soft); }
+@media (max-width: 720px) {
+  .feature { grid-template-columns: 1fr; }
+  .feature > div + div { border-left: 0; border-top: 1px solid var(--gold-soft); }
+}
+
+/* Books: covers with real depth, titles in the serif */
+.book .card-img { background: transparent !important; overflow: visible; padding: 0 18px; }
+.book .card-img > img { box-shadow: 0 2px 4px rgba(16, 60, 74, .08), 0 28px 48px -22px rgba(16, 60, 74, .55); border-radius: 2px 4px 4px 2px; }
+.book .card-body { padding-top: 30px; }
+.book h3 { font-family: var(--display); font-size: 1.4rem; line-height: 1.25; max-width: 24ch; }
+.books-grid { gap: 64px 56px; }
+
+/* Signup: an inset card framed by a double gold hairline */
+.signup-card {
+  background: rgba(255, 253, 248, .75); border: 1px solid var(--gold-soft);
+  outline: 1px solid var(--gold-soft); outline-offset: 8px;
+  padding: clamp(40px, 6vw, 72px) clamp(20px, 6vw, 72px);
+  display: grid; gap: 32px; justify-items: center; width: min(100% - 20px, 760px);
+}
+
+/* Footer: name, links and contact in three columns */
+.site-footer .wrap.foot { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 40px; justify-content: stretch; padding-block: 64px 28px; font-size: .95rem; }
+.foot h2 { margin: 0 0 14px; font-family: var(--body); font-weight: 400; font-size: .72rem; letter-spacing: .28em; text-transform: uppercase; color: var(--honey); }
+.foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.site-footer .foot a { color: #E9EFEF; text-decoration: none; overflow-wrap: anywhere; }
+.site-footer .foot a:hover { color: var(--honey); }
+.foot-brand { display: grid; gap: 14px; align-content: start; }
+.foot-brand .script { font-family: var(--script); font-size: 2.1rem; color: var(--honey); line-height: 1.1; }
+.foot-brand p { color: #BFCDCF; max-width: 30ch; }
+.site-footer .foot-base { border-top: 1px solid rgba(245, 222, 119, .2); }
+.site-footer .foot-base .wrap { padding-block: 20px 28px; font-size: .82rem; color: #9FB2B5; }
+@media (max-width: 720px) { .site-footer .wrap.foot { grid-template-columns: 1fr; gap: 32px; } }
 
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
