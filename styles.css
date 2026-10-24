@@ -14,6 +14,7 @@
   --line: #E8DFC9;
 
   --display: "Cormorant Garamond", "Cormorant", Garamond, Georgia, serif;
+  --script: "Parisienne", "Great Vibes", cursive; /* for a few feature headings */
   --body: "Jost", "Futura", system-ui, -apple-system, "Segoe UI", sans-serif;
 
   --step-0: 1.0625rem;
@@ -221,6 +222,12 @@ strong, b { font-weight: 500; }
   .equine-split { grid-template-columns: 1fr; min-height: 0; }
   .equine-photo { aspect-ratio: 4 / 5; max-height: 72vh; }
 }
+
+/* Script headings */
+h1.script, h2.script { font-family: var(--script); font-weight: 400; line-height: 1.15; letter-spacing: 0; }
+.hero h1.script { font-size: clamp(2.8rem, 7vw, 5.4rem); max-width: 16ch; }
+.page-hero h1.script { font-size: clamp(3.6rem, 9vw, 6.5rem); }
+.section h2.script { font-size: clamp(2.8rem, 6vw, 4.2rem); }
 
 /* Footer */
 .site-footer { background: var(--ink); color: #D3DEDF; }
