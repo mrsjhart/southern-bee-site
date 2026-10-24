@@ -38,6 +38,7 @@ content:
     fields:
       - { name: heroTitle, label: Home page headline, type: string }
       - { name: heroText, label: Home page intro, type: text }
+      - { name: homeQuote, label: Home page quote, type: text }
       - { name: aboutText, label: About page text (blank line between paragraphs), type: text }
       - { name: contactEmail, label: Contact email, type: string }
       - { name: etsyUrl, label: Etsy shop link, type: string }
