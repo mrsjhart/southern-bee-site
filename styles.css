@@ -204,11 +204,13 @@ strong, b { font-weight: 500; }
   .equine-photo { aspect-ratio: 4 / 5; max-height: 72vh; }
 }
 
-/* Script headings */
+/* Script headings: every page title and section heading */
 h1.script, h2.script { font-family: var(--script); font-weight: 400; line-height: 1.15; letter-spacing: 0; }
 .hero h1.script { font-size: clamp(2.8rem, 7vw, 5.4rem); max-width: 16ch; }
 .page-hero h1.script { font-size: clamp(3.6rem, 9vw, 6.5rem); }
 .section h2.script, .signup h2.script { font-size: clamp(2.8rem, 6vw, 4.2rem); }
+.equine-copy h1.script { font-size: clamp(3.2rem, 8vw, 5.6rem); }
+.contact h2.script { font-size: 2.4rem; }
 
 /* Footer */
 .site-footer { background: var(--ink); color: #D3DEDF; }
