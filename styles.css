@@ -1,14 +1,14 @@
 /* Southern Bee Collective
    Look: soft glamour. Warm ivory and champagne, honey gold accents, soft
-   charcoal instead of hard black, a centered header and a graceful serif.
+   deep teal instead of hard black, a centered header and a graceful serif.
    Edit the colors here and the whole site follows. */
 :root {
   --honey: #F5DE77;      /* brand yellow, reads as gold against black */
   --honey-deep: #7A5E00; /* darker gold for small text on light backgrounds */
   --champagne: #F7EDCF;  /* soft honey wash for feature bands */
-  --ink: #2B2724;        /* soft charcoal for text and buttons */
-  --ink-soft: #5E5850;   /* secondary text */
-  --mist: #6B645A;       /* secondary text on champagne */
+  --ink: #103C4A;        /* deep teal for text, buttons and footer */
+  --ink-soft: #4C6168;   /* secondary text */
+  --mist: #5A6A6E;       /* secondary text on champagne */
   --paper: #FFFDF8;      /* warm ivory page */
   --pearl: #FAF5EA;      /* quiet panels */
   --line: #E8DFC9;
@@ -171,7 +171,7 @@ strong, b { font-weight: 500; }
   flex: 1 1 200px; min-width: 0; font: 300 1rem var(--body); padding: 16px 4px; border-radius: 0;
   border: 0; border-bottom: 1px solid var(--ink); background: transparent; color: var(--ink);
 }
-.signup-form input::placeholder { color: #857D70; }
+.signup-form input::placeholder { color: #6E7F83; }
 .signup-form input:focus-visible { outline: none; border-bottom-color: var(--honey-deep); }
 .form-note { font-size: 0.95rem; min-height: 1.4em; }
 .signup.light { background: var(--paper); color: var(--ink); }
@@ -212,7 +212,7 @@ strong, b { font-weight: 500; }
 }
 
 /* Footer */
-.site-footer { background: var(--ink); color: #D8D0C0; }
+.site-footer { background: var(--ink); color: #D3DEDF; }
 .site-footer .wrap { padding-block: 32px; display: flex; gap: 16px; justify-content: space-between; flex-wrap: wrap; font-size: 0.9rem; letter-spacing: 0.04em; }
 .site-footer a { color: var(--honey); }
 
