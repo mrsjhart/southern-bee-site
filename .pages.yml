@@ -39,6 +39,12 @@ content:
       - { name: heroTitle, label: Home page headline, type: string }
       - { name: heroText, label: Home page intro, type: text }
       - { name: homeQuote, label: Home page quote, type: text }
+      - { name: featureOneTitle, label: Home downloads point 1 title, type: string }
+      - { name: featureOneText, label: Home downloads point 1 text, type: string }
+      - { name: featureTwoTitle, label: Home downloads point 2 title, type: string }
+      - { name: featureTwoText, label: Home downloads point 2 text, type: string }
+      - { name: featureThreeTitle, label: Home downloads point 3 title, type: string }
+      - { name: featureThreeText, label: Home downloads point 3 text, type: string }
       - { name: aboutText, label: About page text (blank line between paragraphs), type: text }
       - { name: contactEmail, label: Contact email, type: string }
       - { name: etsyUrl, label: Etsy shop link, type: string }

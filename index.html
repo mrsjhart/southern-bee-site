@@ -44,13 +44,19 @@
   <main>
     <section class="hero">
       <div class="wrap">
-        <div class="hero-copy">
-        <h1 class="script" data-content="heroTitle">Small creations for a sweeter world.</h1>
-        <p data-content="heroText">Instant digital downloads from Southern Bee Collective, with boutique goods coming soon.</p>
-        <div class="btn-row">
-          <a class="btn" href="https://southernbcollective.etsy.com" target="_blank" rel="noopener" data-link="etsyUrl">Shop on Etsy</a>
-          <a class="btn ghost" href="subscribe.html">Join the list</a>
-        </div>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Southern Bee Collective</span>
+            <h1 class="script" data-content="heroTitle">Small creations for a sweeter world.</h1>
+            <p data-content="heroText">Instant digital downloads from Southern Bee Collective, with boutique goods coming soon.</p>
+            <div class="btn-row">
+              <a class="btn" href="https://southernbcollective.etsy.com" target="_blank" rel="noopener" data-link="etsyUrl">Shop on Etsy</a>
+              <a class="btn ghost" href="subscribe.html">Join the list</a>
+            </div>
+          </div>
+          <div class="arch-frame">
+            <div class="arch"><img src="assets/jessica-portrait.jpg" alt="Jessica Hart smiling beside her chestnut horse, with autumn trees behind them" width="800" height="1000" fetchpriority="high"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -66,8 +72,14 @@
     <section class="section">
       <div class="wrap">
         <div class="section-head">
+          <span class="eyebrow">The shop</span>
           <h2 class="script">Digital downloads</h2>
           <p>Guides, templates and printables are sold through our Etsy shop, and books are on Amazon.</p>
+        </div>
+        <div class="feature">
+          <div><span class="num">i.</span><h3 data-content="featureOneTitle">Instant download</h3><p data-content="featureOneText">Yours the moment you check out on Etsy.</p></div>
+          <div><span class="num">ii.</span><h3 data-content="featureTwoTitle">Print or go digital</h3><p data-content="featureTwoText">Use them at home, on a tablet, or both.</p></div>
+          <div><span class="num">iii.</span><h3 data-content="featureThreeTitle">Made with care</h3><p data-content="featureThreeText">Simple, beautiful tools you’ll actually use.</p></div>
         </div>
         <div><a class="btn" href="https://southernbcollective.etsy.com" target="_blank" rel="noopener" data-link="etsyUrl">Shop downloads on Etsy</a></div>
       </div>
@@ -77,6 +89,7 @@
     <section class="section tinted books-section" id="books">
       <div class="wrap">
         <div class="section-head">
+          <span class="eyebrow">By Jessica Hart</span>
           <h2 class="script">Books</h2>
           <p>Read a preview of each book on Amazon.</p>
         </div>
@@ -86,27 +99,41 @@
 
     <section class="signup" id="signup">
       <div class="wrap">
-        <div class="section-head">
-          <h2 class="script">Get new releases first</h2>
-          <p>New downloads, freebies and boutique drops, sent straight to your inbox. No spam, unsubscribe anytime.</p>
-        </div>
-        <form class="signup-form" id="signup-form-home" novalidate>
-          <div class="row">
-            <input id="name-home" name="name" type="text" aria-label="First name" placeholder="First name" autocomplete="given-name">
-            <input id="email-home" name="email" type="email" aria-label="Email address" placeholder="you@example.com" autocomplete="email" required>
+        <div class="signup-card">
+          <div class="section-head">
+            <span class="eyebrow">The list</span>
+            <h2 class="script">Get new releases first</h2>
+            <p>New downloads, freebies and boutique drops, sent straight to your inbox. No spam, unsubscribe anytime.</p>
           </div>
-          <div class="row"><button class="btn" type="submit">Sign me up</button></div>
-          <p class="form-note" role="status"></p>
-        </form>
+          <form class="signup-form" id="signup-form-home" novalidate>
+            <div class="row">
+              <input id="name-home" name="name" type="text" aria-label="First name" placeholder="First name" autocomplete="given-name">
+              <input id="email-home" name="email" type="email" aria-label="Email address" placeholder="you@example.com" autocomplete="email" required>
+            </div>
+            <div class="row"><button class="btn" type="submit">Sign me up</button></div>
+            <p class="form-note" role="status"></p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <span>&copy; <span id="year">2026</span> Southern Bee Collective</span>
-      <span><a href="subscribe.html">Join the list</a> &middot; <a href="shop.html">Shop</a></span>
+    <div class="wrap foot">
+      <div class="foot-brand">
+        <span class="script">Southern Bee Collective</span>
+        <p>Small creations for a sweeter world: books, digital downloads and holistic wellness.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h2>Explore</h2>
+        <ul><li><a href="shop.html">Shop</a></li><li><a href="index.html#books">Books</a></li><li><a href="equine.html">Holistic Wellness</a></li><li><a href="about.html">About</a></li></ul>
+      </nav>
+      <div>
+        <h2>Say hello</h2>
+        <ul><li><a href="mailto:southernbeecollective@gmail.com">southernbeecollective@gmail.com</a></li><li><a href="https://southernbcollective.etsy.com" target="_blank" rel="noopener" data-link="etsyUrl">Etsy shop</a></li><li><a href="subscribe.html">Join the list</a></li></ul>
+      </div>
     </div>
+    <div class="foot-base"><div class="wrap"><span>&copy; <span id="year">2026</span> Southern Bee Collective</span></div></div>
   </footer>
 </body>
 </html>
