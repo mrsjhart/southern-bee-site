@@ -69,7 +69,7 @@ strong, b { font-weight: 500; }
 .nav a[aria-current="page"] { border-bottom-color: var(--ink); }
 @media (max-width: 520px) {
   .brand img { height: 46px; }
-  .brand-name { letter-spacing: 0.1em; }
+  .brand-name { letter-spacing: 0.08em; font-size: 1.05rem; }
   .nav { gap: 0 13px; }
   .nav a { letter-spacing: 0.08em; font-size: 0.7rem; }
 }
