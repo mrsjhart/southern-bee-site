@@ -192,6 +192,7 @@ strong, b { font-weight: 500; }
   background: var(--honey); clip-path: var(--hex); padding: 7px;
 }
 .honeycomb img { width: 100%; height: 100%; object-fit: cover; clip-path: var(--hex); }
+.prose .photo-credit { margin-top: 14px; text-align: center; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); }
 
 /* Equine Services: photo and black text panel, side by side */
 .equine { background: var(--pearl); color: var(--ink); }
