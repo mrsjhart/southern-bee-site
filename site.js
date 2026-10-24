@@ -120,6 +120,10 @@ async function loadJSON(path, fallback) {
 }
 
 function applySiteText(text) {
+  document.querySelectorAll("[data-link]").forEach(el => {
+    const url = text[el.dataset.link];
+    if (url) el.href = url;
+  });
   document.querySelectorAll("[data-content]").forEach(el => {
     const value = text[el.dataset.content];
     if (!value) return;
@@ -138,7 +142,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const needsShop = document.getElementById("downloads-grid") || document.getElementById("boutique-grid");
   const [text, downloads, boutique] = await Promise.all([
     loadJSON("content/site.json", {}),
-    needsShop ? loadJSON("content/downloads.json", []) : [],
+    [],
     needsShop ? loadJSON("content/boutique.json", []) : [],
   ]);
   applySiteText(text);

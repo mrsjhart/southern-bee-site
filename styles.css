@@ -106,7 +106,6 @@ strong, b { font-weight: 500; }
 .section-head { display: grid; gap: 14px; justify-items: center; text-align: center; max-width: 44rem; margin-inline: auto; }
 .section-head p { color: var(--ink-soft); }
 .section h2 { font-size: var(--step-3); }
-.section .wrap > div:last-child:has(> .btn) { text-align: center; }
 
 /* What we make: four columns divided by fine rules */
 .kinds { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-block: 1px solid var(--ink); }
@@ -158,6 +157,9 @@ strong, b { font-weight: 500; }
 }
 .empty h3 { font-family: var(--display); font-size: var(--step-2); }
 .empty p { color: var(--ink-soft); max-width: 40ch; }
+
+.etsy-cta { display: flex; justify-content: center; }
+.section .wrap > div:last-child:not(.empty):has(> .btn) { display: flex; justify-content: center; }
 
 /* Signup band */
 .signup { background: var(--ink); color: var(--paper); }
